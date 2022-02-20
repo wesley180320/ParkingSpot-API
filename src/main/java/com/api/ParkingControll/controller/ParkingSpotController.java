@@ -38,7 +38,7 @@ public class ParkingSpotController {
     public ResponseEntity<Object> saveParkingSpot(@RequestBody @Valid ParkingSpotDto parkingSpotDto){
 
 
-        var parkingSpotModel = new ParkingSpotModel();
+        ParkingSpotModel parkingSpotModel = new ParkingSpotModel();
         BeanUtils.copyProperties(parkingSpotDto,parkingSpotModel);
         parkingSpotModel.setRegistrationDate(LocalDate.from(LocalDateTime.now(ZoneId.of("UTC"))));
 
@@ -87,7 +87,7 @@ public class ParkingSpotController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Parking Spot not found");
         }
 
-        var parkingSpotModel1 = parkingSpotModel.get();
+        ParkingSpotModel parkingSpotModel1 = parkingSpotModel.get();
         parkingSpotModel1.setParkingSpotnumber(parkingSpotDto.getParkingSpotnumber());
         parkingSpotModel1.setLicenseplatecar(parkingSpotDto.getLicenseplatecar());
         parkingSpotModel1.setModelCar(parkingSpotDto.getModelCar());
