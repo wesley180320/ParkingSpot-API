@@ -17,19 +17,10 @@ public class ParkingControllApplication implements CommandLineRunner {
 		SpringApplication.run(ParkingControllApplication.class, args);
 	}
 
-	@Autowired
-	private ParkingSpotRepository parkingSpotRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
 
 
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
-		ParkingSpotModel parkingSpotModel = new ParkingSpotModel(null,"10","123w45","Audi","q5","preto",null,"Wesley","125","A");
-		ParkingSpotModel parkingSpotModel2 = new ParkingSpotModel(null,"12","124w47","Audi","q6","branco",null,"joao","135","B");
-
-
-		parkingSpotRepository.saveAll(Arrays.asList(parkingSpotModel,parkingSpotModel2));
 	}
 }
