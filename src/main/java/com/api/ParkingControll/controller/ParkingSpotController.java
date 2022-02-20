@@ -3,7 +3,7 @@ package com.api.ParkingControll.controller;
 
 import com.api.ParkingControll.dtos.ParkingSpotDto;
 import com.api.ParkingControll.models.ParkingSpotModel;
-import com.api.ParkingControll.services.ParkingSportServices;
+import com.api.ParkingControll.services.ParkingSpotServices;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -19,19 +19,18 @@ import javax.validation.Valid;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 @Repository
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/parking-spot")
-public class ParkingSporController {
+public class ParkingSpotController {
 
 
-    final ParkingSportServices parkingSportServices;
+    final ParkingSpotServices parkingSportServices;
 
-    public ParkingSporController(ParkingSportServices parkingSportServices) {
+    public ParkingSpotController(ParkingSpotServices parkingSportServices) {
         this.parkingSportServices = parkingSportServices;
     }
 

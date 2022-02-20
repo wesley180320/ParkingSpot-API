@@ -30,7 +30,7 @@ public class ParkingSpotModel implements Serializable {
     @Column(nullable = false,length = 70)
     private String colorCar;
 
-    @Column(nullable = false)
+
     private LocalDate registrationDate;
 
     @Column(nullable = false,length = 130)
@@ -42,6 +42,21 @@ public class ParkingSpotModel implements Serializable {
     @Column(nullable = false,length = 30)
     private String block;
 
+
+    public ParkingSpotModel (){}
+
+    public ParkingSpotModel(UUID id, String parkingSpotnumber, String licenseplatecar, String brandCar, String modelCar, String colorCar, LocalDate registrationDate, String responsibleName, String apartment, String block) {
+        this.id = id;
+        this.parkingSpotnumber = parkingSpotnumber;
+        this.licenseplatecar = licenseplatecar;
+        this.brandCar = brandCar;
+        this.modelCar = modelCar;
+        this.colorCar = colorCar;
+        this.registrationDate = registrationDate;
+        this.responsibleName = responsibleName;
+        this.apartment = apartment;
+        this.block = block;
+    }
 
     public UUID getId() {
         return id;
