@@ -52,7 +52,7 @@ public class ParkingSpotController {
         Optional<ParkingSpotModel> parkingSpotModel = parkingSportServices.findByID(id);
 
         // Verificando se o ID existe
-        if (parkingSpotModel.isEmpty()){
+        if (parkingSpotModel == null){
 
           return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Parking Spot not found");
         }
@@ -66,7 +66,7 @@ public class ParkingSpotController {
         Optional<ParkingSpotModel> parkingSpotModel = parkingSportServices.findByID(id);
 
         // Verificando se o ID existe
-        if (parkingSpotModel.isEmpty()){
+        if (parkingSpotModel== null){
 
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Parking Spot not found");
         }
@@ -82,7 +82,7 @@ public class ParkingSpotController {
         Optional<ParkingSpotModel> parkingSpotModel = parkingSportServices.findByID(id);
 
         // Verificando se o ID existe
-        if (parkingSpotModel.isEmpty()){
+        if (parkingSpotModel == null){
 
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Parking Spot not found");
         }
