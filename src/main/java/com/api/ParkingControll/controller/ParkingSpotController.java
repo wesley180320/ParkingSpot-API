@@ -101,7 +101,7 @@ public class ParkingSpotController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<ParkingSpotModel>> getOneParkingSpot(@PageableDefault(page = 0,size = 10, sort = "id", direction = Sort.Direction.ASC)Pageable pageable){
+    public ResponseEntity<Page<ParkingSpotModel>> getOneParkingSpot(@PageableDefault(page = 0,size = 1, sort = "id", direction = Sort.Direction.ASC)Pageable pageable){
 
         return ResponseEntity.ok().body(parkingSportServices.findAll(pageable));
     }
