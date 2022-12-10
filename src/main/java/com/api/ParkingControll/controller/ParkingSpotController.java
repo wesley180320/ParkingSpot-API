@@ -22,7 +22,7 @@ import java.time.ZoneId;
 import java.util.Optional;
 import java.util.UUID;
 
-@Repository
+@RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/parking-spot")
 public class ParkingSpotController {
