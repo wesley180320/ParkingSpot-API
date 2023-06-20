@@ -21,27 +21,22 @@ public class ParkingSpotServices {
 
     @Transactional
     public Optional<ParkingSpotModel> findByID(UUID id){
-
         return parkingsportrepository.findById(id);
     }
 
     @Transactional
     public ParkingSpotModel save(ParkingSpotModel parkingSpotModel){
-
         return parkingsportrepository.save(parkingSpotModel);
     }
 
 
     @Transactional
     public Page<ParkingSpotModel> findAll(Pageable pageable){
-
         return parkingsportrepository.findAll(pageable);
-
     }
 
     @Transactional
-    public void delet(UUID id){
-
+    public void delete(UUID id){
         parkingsportrepository.deleteById(id);
     }
 
