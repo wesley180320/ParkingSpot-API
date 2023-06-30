@@ -1,19 +1,14 @@
 package com.api.ParkingControll.controller;
 
-import com.api.ParkingControll.dtos.UserDto;
-import com.api.ParkingControll.models.ParkingSpotModel;
+
 import com.api.ParkingControll.models.UserModel;
 import com.api.ParkingControll.services.UserModelService;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
