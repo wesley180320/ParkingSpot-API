@@ -37,7 +37,6 @@ public class ParkingSpotController {
     @PostMapping
     public ResponseEntity<Object> saveParkingSpot(@RequestBody @Valid ParkingSpotDto parkingSpotDto){
 
-
         ParkingSpotModel parkingSpotModel = new ParkingSpotModel();
         BeanUtils.copyProperties(parkingSpotDto,parkingSpotModel);
         parkingSpotModel.setRegistrationDate(LocalDate.from(LocalDateTime.now(ZoneId.of("UTC"))));
