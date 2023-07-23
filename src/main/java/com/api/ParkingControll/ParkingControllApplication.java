@@ -29,20 +29,21 @@ public class ParkingControllApplication implements CommandLineRunner {
 	}
 
 
-	//	@Autowired
-	//	private UserModelRepository userModelRepository;
+		@Autowired
+		private UserModelRepository userModelRepository;
 
 	@Autowired
 	private EmailService emailService;
 
 	@Override
 	public void run(String... args) throws Exception {
+
 		//LocalDate l1 = LocalDate.from(LocalDateTime.now());
 		//ParkingSpotModel pk = new ParkingSpotModel(null, "25", "789045","audi","a5","black",l1,"wesley","129","5");
 		//parkingSpotRepository.save(pk);
-		//		PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-		//		UserModel userModel = new UserModel("wesley", passwordEncoder.encode("180320"));
-		//		userModelRepository.save(userModel);
+//				PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+//				UserModel userModel = new UserModel("wesley2", passwordEncoder.encode("180320"), "estevaoowesley@gmail.com");
+//				userModelRepository.save(userModel);
 //
 //			EmailModel emailModel = new EmailModel(null, "Wesley", "estevaoowesley@gmail.com", "joao15@gmail.com", "gay", "gay", LocalDate.now(), StatusEmail.ENVIADO);
 //			emailService.sendEmail(emailModel);

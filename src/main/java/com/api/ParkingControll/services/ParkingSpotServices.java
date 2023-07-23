@@ -2,6 +2,7 @@ package com.api.ParkingControll.services;
 
 import com.api.ParkingControll.models.ParkingSpotModel;
 import com.api.ParkingControll.repositories.ParkingSpotRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,10 @@ public class ParkingSpotServices {
     public ParkingSpotServices(ParkingSpotRepository parkingsportrepository) {
         this.parkingsportrepository = parkingsportrepository;
     }
+
+
+    @Autowired
+    private EmailService emailService;
 
     @Transactional
     public Optional<ParkingSpotModel> findByID(UUID id){

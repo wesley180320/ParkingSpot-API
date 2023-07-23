@@ -4,6 +4,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.UUID;
@@ -21,11 +22,16 @@ public class UserModel implements UserDetails, Serializable {
     @Column(unique = true)
     private String password;
 
+    @Email
+    @Column(nullable = false, unique = false)
+    private String emailUser;
+
     public UserModel(){}
 
-    public UserModel(String username, String password) {
+    public UserModel(String username, String password, String emailUser) {
         this.username = username;
         this.password = password;
+        this.emailUser = emailUser;
     }
 
     public void setPassword(String password) {
@@ -73,5 +79,28 @@ public class UserModel implements UserDetails, Serializable {
     @Override
     public boolean isEnabled() {
         return false;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getEmail() {
+        return emailUser;
+    }
+
+    public void setEmail(String emailUser) {
+        this.emailUser = emailUser;
+    }
+
+    @Override
+    public String toString() {
+        String texto = " Cadastro PARKING SPOT dados de login";
+
+        texto += System.lineSeparator() + " USUARIO = " + username;
+        texto += System.lineSeparator() + " SENHA = " + password;
+        texto += System.lineSeparator() + " EMAIL = " + emailUser;
+
+        return texto;
     }
 }
