@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  myapp:
+    image: openjdk:11-jre-slim
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./target/ParkingControll-0.0.1-SNAPSHOT.jar:/app.jar
+    command: ["java", "-jar", "/app.jar"]
+    deploy:
+      restart_policy:
+        condition: on-failure # Reiniciar o contêiner em caso de falha
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+      timeout: 8m # Definindo o timeout para 5 minutos
