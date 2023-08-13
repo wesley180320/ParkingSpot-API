@@ -26,6 +26,7 @@ public class EmailModel implements Serializable {
     private LocalDate sendDateEmail;
     private StatusEmail statusEmail;
 
+    public EmailModel(){}
 
     public EmailModel(UUID emailId, String ownerRef, String emailFrom, String emailTo, String subject, String text, LocalDate sendDateEmail, StatusEmail statusEmail) {
         this.emailId = emailId;
